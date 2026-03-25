@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smaranda Andreșescu | Digital Marketing & Analytics</title>
+  <meta name="description"
+    content="Multilingual AI-driven Digital Marketing & Analytics specialist. Master's student at TBS Barcelona seeking internship in Spain or France.">
+  <meta property="og:title" content="Smaranda Andreșescu | Digital Marketing & Analytics">
+  <meta property="og:description" content="Data-driven. Globally minded. Digitally sharp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root[data-theme="light"] {
+      --bg: #ffffff;
+      --sf: #f4f4f6;
+      --text: #0a0a0f;
+      --ts: #4a4a52;
+      --brd: rgba(10, 10, 15, 0.1);
+      --glass: rgba(255, 255, 255, 0.85);
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0a0a0f;
+      --sf: #111118;
+      --text: #f0f0f5;
+      --ts: #94a3b8;
+      --brd: rgba(255, 255, 255, 0.1);
+      --glass: rgba(10, 10, 15, 0.85);
+    }
+
+    :root {
+      --a1: #4F6EF7;
+      --a2: #9B7FF4;
+      --grad: linear-gradient(135deg, #4F6EF7, #9B7FF4);
+      --sh: 0 4px 24px rgba(79, 110, 247, 0.08);
+      --shh: 0 8px 32px rgba(79, 110, 247, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background .3s, color .3s;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 96px 0;
+      position: relative;
+      scroll-margin-top: 72px;
+    }
+
+    /* Progress bar */
+    .prog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--grad);
+      z-index: 1000;
+      width: 0%;
+      transition: width .1s;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 0;
+      z-index: 999;
+      transition: all .3s;
+    }
+
+    nav.sc {
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--brd);
+      padding: 12px 0;
+    }
+
+    .nv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      font-family: 'Plus Jakarta Sans';
+      letter-spacing: -.05em;
+    }
+
+    .logo span {
+      color: var(--a1);
+    }
+
+    .nl {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nl a {
+      font-size: .875rem;
+      font-weight: 500;
+      color: var(--ts);
+      transition: color .3s;
+    }
+
+    .nl a:hover,
+    .nl a.active {
+      color: var(--text);
+    }
+
+    .tgl {
+      background: none;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border-radius: 50%;
+    }
+
+    .tgl:hover {
+      background: var(--brd);
+    }
+
+    .mb {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: .9375rem;
+      transition: all .3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-p {
+      background: var(--grad);
+      color: #fff;
+      box-shadow: var(--sh);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-p::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+      transition: .5s;
+    }
+
+    .btn-p:hover::after {
+      left: 100%;
+    }
+
+    .btn-p:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shh);
+    }
+
+    .btn-s {
+      background: transparent;
+      border: 2px solid var(--brd);
+      color: var(--text);
+    }
+
+    .btn-s:hover {
+      border-color: var(--a1);
+      color: var(--a1);
+      transform: translateY(-2px);
+    }
+
+    /* Animation */
+    .au {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .8s cubic-bezier(.16, 1, .3, 1), transform .8s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .au.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .d1 {
+      transition-delay: 100ms;
+    }
+
+    .d2 {
+      transition-delay: 200ms;
+    }
+
+    .d3 {
+      transition-delay: 300ms;
+    }
+
+    /* Hero */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .orb {
+      position: absolute;
+      width: 60vw;
+      height: 60vw;
+      max-width: 700px;
+      max-height: 700px;
+      background: var(--grad);
+      filter: blur(130px);
+      opacity: .12;
+      border-radius: 50%;
+      animation: fl 14s infinite alternate ease-in-out;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+    }
+
+    .orb2 {
+      position: absolute;
+      width: 40vw;
+      height: 40vw;
+      max-width: 500px;
+      max-height: 500px;
+      background: linear-gradient(135deg, #9B7FF4, #4F6EF7);
+      filter: blur(120px);
+      opacity: .08;
+      border-radius: 50%;
+      animation: fl2 10s infinite alternate ease-in-out;
+      z-index: 0;
+      top: 20%;
+      right: -10%;
+    }
+
+    @keyframes fl {
+      0% {
+        transform: translate(-40%, -45%) scale(.85);
+      }
+
+      100% {
+        transform: translate(-60%, -55%) scale(1.1);
+      }
+    }
+
+    @keyframes fl2 {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(-5%, 10%);
+      }
+    }
+
+    .hc {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-logo {
+      font-size: 3rem;
+      font-weight: 800;
+      font-family: 'Plus Jakarta Sans';
+      letter-spacing: -.05em;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .hero-logo span {
+      color: var(--a1);
+    }
+
+    .lpills {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .lp {
+      padding: 4px 14px;
+      background: var(--sf);
+      border: 1px solid var(--brd);
+      border-radius: 100px;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--ts);
+    }
+
+    .ht {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      margin-bottom: 24px;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+    }
+
+    .tw {
+      display: inline;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-right: 3px solid var(--a1);
+      animation: blink .75s step-end infinite;
+      padding-right: 4px;
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .hs {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--ts);
+      max-width: 680px;
+      margin: 0 auto 32px;
+      font-weight: 400;
+    }
+
+    .hcta {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .sd {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+      color: var(--ts);
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0) translateX(-50%);
+      }
+
+      40% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+
+      60% {
+        transform: translateY(-5px) translateX(-50%);
+      }
+    }
+
+    /* About */
+    .abg {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .st {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 32px;
+    }
+
+    .atp p {
+      margin-bottom: 16px;
+      color: var(--ts);
+      font-size: 1.05rem;
+    }
+
+    .sts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .sc {
+      background: var(--sf);
+      padding: 24px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--brd);
+      text-align: center;
+      transition: transform .3s;
+    }
+
+    .sc:hover {
+      transform: translateY(-4px);
+      border-color: var(--a1);
+      box-shadow: var(--sh);
+    }
+
+    .sn {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans';
+      margin-bottom: 4px;
+    }
+
+    .sl {
+      font-size: .75rem;
+      color: var(--ts);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 600;
+    }
+
+    .aiv {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .air {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ts);
+      background: linear-gradient(var(--bg), var(--bg)) padding-box, var(--grad) border-box;
+      border: 3px solid transparent;
+    }
+
+    /* Skills */
+    .skgr {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px;
+    }
+
+    .skc {
+      background: var(--sf);
+      padding: 32px;
+      border-radius: 24px;
+      border: 1px solid var(--brd);
+      transition: all .3s;
+      position: relative;
+    }
+
+    .skc::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--grad);
+      border-radius: 3px 3px 0 0;
+      opacity: .5;
+    }
+
+    .skc:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sh);
+      border-color: rgba(79, 110, 247, .3);
+    }
+
+    .skh {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .skh i {
+      color: var(--a1);
+    }
+
+    .skh h3 {
+      font-size: 1.25rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid var(--brd);
+      border-radius: 100px;
+      font-size: .8125rem;
+      color: var(--ts);
+      transition: all .3s;
+      font-weight: 500;
+    }
+
+    [data-theme="light"] .tag {
+      background: rgba(0, 0, 0, .03);
+    }
+
+    .tag:hover {
+      background: var(--a1);
+      color: #fff;
+      border-color: var(--a1);
+      box-shadow: 0 4px 12px rgba(79, 110, 247, .3);
+      transform: translateY(-2px);
+    }
+
+    /* Projects */
+    .filt {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .fb {
+      padding: 8px 18px;
+      background: var(--sf);
+      border: 1px solid var(--brd);
+      border-radius: 100px;
+      color: var(--ts);
+      cursor: pointer;
+      font-weight: 500;
+      font-family: 'Inter';
+      transition: all .3s;
+      font-size: .875rem;
+    }
+
+    .fb.active,
+    .fb:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .pgr {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .pc {
+      background: var(--sf);
+      border-radius: 24px;
+      border: 1px solid var(--brd);
+      padding: 32px;
+      transition: all .3s;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pc::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--grad);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .pc:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sh);
+      border-color: var(--a1);
+    }
+
+    .pc:hover::after {
+      opacity: 1;
+    }
+
+    .pcat {
+      display: inline-block;
+      padding: 4px 10px;
+      background: rgba(79, 110, 247, .1);
+      color: var(--a1);
+      border-radius: 6px;
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      letter-spacing: .05em;
+    }
+
+    .ptit {
+      font-size: 1.375rem;
+      margin-bottom: 12px;
+    }
+
+    .pout {
+      font-size: .9375rem;
+      color: var(--ts);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .ptags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .ptag {
+      font-size: .75rem;
+      color: var(--ts);
+      padding: 3px 10px;
+      border: 1px solid var(--brd);
+      border-radius: 6px;
+    }
+
+    .pdbtn {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: .9375rem;
+      transition: color .3s;
+      font-family: 'Inter';
+    }
+
+    .pdbtn:hover {
+      color: var(--a1);
+    }
+
+    .pdet {
+      display: none;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--brd);
+      animation: fid .4s ease;
+    }
+
+    .pdet.open {
+      display: block;
+    }
+
+    @keyframes fid {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .pdh {
+      font-size: .8rem;
+      color: var(--a1);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: .06em;
+      margin-bottom: 8px;
+      margin-top: 16px;
+    }
+
+    .pdh:first-child {
+      margin-top: 0;
+    }
+
+    .pdt {
+      font-size: .9375rem;
+      color: var(--ts);
+      line-height: 1.55;
+    }
+
+    .pdm {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .pdmb {
+      background: var(--bg);
+      border: 1px solid var(--brd);
+      padding: 12px 8px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .pdmv {
+      display: block;
+      font-weight: 800;
+      color: var(--text);
+      font-size: 1.05rem;
+      font-family: 'Plus Jakarta Sans';
+    }
+
+    .pdml {
+      font-size: .65rem;
+      color: var(--ts);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-top: 2px;
+      display: block;
+    }
+
+    /* Experience */
+    .tl {
+      position: relative;
+      max-width: 780px;
+      margin: 0 auto;
+      padding-left: 40px;
+    }
+
+    .tl::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 0;
+      width: 2px;
+      background: var(--grad);
+      opacity: .35;
+      border-radius: 2px;
+    }
+
+    .ti {
+      position: relative;
+      margin-bottom: 48px;
+    }
+
+    .ti:last-child {
+      margin-bottom: 0;
+    }
+
+    .tdot {
+      position: absolute;
+      left: -46px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--a1);
+      box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--a1);
+    }
+
+    .tdate {
+      font-size: .875rem;
+      color: var(--a1);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .ttit {
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+    }
+
+    .torg {
+      font-size: 1rem;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .tdesc {
+      color: var(--ts);
+      font-size: .9375rem;
+    }
+
+    /* Contact */
+    .ctw {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 64px;
+      background: var(--sf);
+      padding: 64px;
+      border-radius: 24px;
+      border: 1px solid var(--brd);
+    }
+
+    .ctit {
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      margin-bottom: 8px;
+    }
+
+    .csub {
+      color: var(--ts);
+      font-size: 1rem;
+      margin-top: 8px;
+      margin-bottom: 32px;
+    }
+
+    .fg {
+      margin-bottom: 16px;
+    }
+
+    .fl {
+      display: block;
+      font-size: .875rem;
+      color: var(--ts);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .fc {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg);
+      border: 1px solid var(--brd);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: 'Inter';
+      font-size: 1rem;
+      transition: border .3s;
+    }
+
+    .fc:focus {
+      outline: none;
+      border-color: var(--a1);
+    }
+
+    select.fc {
+      appearance: none;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='gray' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 12px center var(--bg);
+      background-size: 1.1rem;
+    }
+
+    textarea.fc {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .bsub {
+      width: 100%;
+      justify-content: center;
+      padding: 1rem;
+      margin-top: 8px;
+    }
+
+    .cinfo {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .ci {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .ci i {
+      color: var(--a1);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .ci h4 {
+      font-size: 1rem;
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+
+    .ci p,
+    .ci a {
+      color: var(--ts);
+      font-size: .9375rem;
+      transition: color .3s;
+    }
+
+    .ci a:hover {
+      color: var(--a1);
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0 32px;
+      border-top: 1px solid var(--brd);
+    }
+
+    .fg2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .flog {
+      font-size: 1.5rem;
+      font-weight: 800;
+      font-family: 'Plus Jakarta Sans';
+      letter-spacing: -.05em;
+    }
+
+    .flog span {
+      color: var(--a1);
+    }
+
+    .fnav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .fnav a {
+      color: var(--ts);
+      font-size: .9375rem;
+      transition: color .3s;
+    }
+
+    .fnav a:hover {
+      color: var(--text);
+    }
+
+    .fsoc a {
+      color: var(--ts);
+      transition: color .3s;
+    }
+
+    .fsoc a:hover {
+      color: var(--text);
+    }
+
+    .fbot {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--brd);
+      color: var(--ts);
+      font-size: .875rem;
+    }
+
+    @media(max-width:900px) {
+
+      .abg,
+      .ctw {
+        grid-template-columns: 1fr;
+      }
+
+      .aiv {
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .ctw {
+        padding: 32px 24px;
+      }
+    }
+
+    @media(max-width:768px) {
+      section {
+        padding: 64px 0;
+      }
+
+      .nl {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: var(--sf);
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        transition: height .35s;
+        border-bottom: 1px solid var(--brd);
+        z-index: 998;
+        gap: 0;
+      }
+
+      .nl.open {
+        height: calc(100vh - 64px);
+      }
+
+      .nl a {
+        display: block;
+        padding: 20px;
+        font-size: 1.1rem;
+      }
+
+      .mb {
+        display: block;
+      }
+
+      .air {
+        max-width: 260px;
+      }
+
+      .sts {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .pdm {
+        grid-template-columns: 1fr;
+      }
+
+      .pgr {
+        grid-template-columns: 1fr;
+      }
+
+      .fg2 {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .fnav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="prog" id="prog"></div>
+
+  <nav id="nav"></nav>
+
+  <section id="hero">
+    <div class="orb"></div>
+    <div class="orb2"></div>
+    <div class="container hc">
+      <div class="hero-logo au">SA<span>.</span></div>
+      <div class="lpills au"><span class="lp">🇬🇧 English</span><span class="lp">🇫🇷 French</span><span
+          class="lp">🇪🇸 Spanish</span><span class="lp">🇷🇴 Romanian</span></div>
+      <h1 class="ht au d1">AI-driven Marketing. <span class="tw" id="tw">Digitally Sharp.</span></h1>
+      <p class="hs au d2">Smaranda Andreșescu · AI-driven Digital Marketing & Analytics Specialist · Barcelona</p>
+      <div class="hcta au d3">
+        <a href="#projects" class="btn btn-p">View My Work <i data-lucide="arrow-right"></i></a>
+        <a href="[CV_LINK.pdf]" target="_blank" class="btn btn-s">Download CV <i data-lucide="download"></i></a>
+      </div>
+    </div>
+    <div class="sd"><i data-lucide="arrow-down"></i></div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="abg">
+        <div class="au">
+          <h2 class="st">Where Analytics Meets Ambition</h2>
+          <div class="atp">
+            <p>Currently completing my Master's in Digital Marketing & Analytics at Toulouse Business School in
+              Barcelona. I hold a Bachelor's in International Business from Maastricht University, with a study abroad
+              semester at Universidad Carlos III de Madrid.</p>
+            <p>My experience spans multinational environments across Europe — from an internship at the European
+              Commission in Brussels, to Innovation & Business Development at Vodafone Romania, to customer service at
+              H&M in the Netherlands.</p>
+            <p>I combine strong analytical skills (R, Python, Power BI, Tableau) with hands-on marketing expertise
+              (Google Ads, HubSpot, SEO, Social Media) and a natural ability to work across languages and cultures.</p>
+          </div>
+          <div class="sts">
+            <div class="sc">
+              <div class="sn">4</div>
+              <div class="sl">Internships</div>
+            </div>
+            <div class="sc">
+              <div class="sn">8+</div>
+              <div class="sl">Tools Mastered</div>
+            </div>
+            <div class="sc">
+              <div class="sn">4</div>
+              <div class="sl">Languages</div>
+            </div>
+          </div>
+        </div>
+        <div class="aiv au d2">
+          <div
+            style="width:340px;height:340px;border-radius:50%;padding:3px;background:linear-gradient(135deg,#4F6EF7,#9B7FF4);box-shadow:0 8px 32px rgba(79,110,247,0.15);flex-shrink:0;">
+            <img src="Gemini_Generated_Image_orz1y7orz1y7orz1.png"
+              alt="Smaranda Andreșescu - Digital Marketing & Analytics Specialist"
+              style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 30%;display:block;background:#e8eaf6;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="st au" style="text-align:center;margin-bottom:48px;">Core Competencies</h2>
+      <div class="skgr">
+        <div class="skc au">
+          <div class="skh"><i data-lucide="bot"></i>
+            <h3>AI & Technology</h3>
+          </div>
+          <div class="tags"><span class="tag">Generative AI</span><span class="tag">AI in Marketing</span><span
+              class="tag">Prompt Engineering</span><span class="tag">Python</span><span class="tag">R Studio</span><span
+              class="tag">SPSS</span><span class="tag">CapCut</span><span class="tag">Microsoft 365</span></div>
+        </div>
+        <div class="skc au d1">
+          <div class="skh"><i data-lucide="megaphone"></i>
+            <h3>Digital Marketing</h3>
+          </div>
+          <div class="tags"><span class="tag">SEO & SEM</span><span class="tag">Google Ads</span><span
+              class="tag">GA4</span><span class="tag">Social Media Strategy</span><span class="tag">Content
+              Marketing</span><span class="tag">Email Marketing</span><span class="tag">HubSpot</span><span
+              class="tag">CRO</span><span class="tag">E-commerce</span></div>
+        </div>
+        <div class="skc au d2">
+          <div class="skh"><i data-lucide="bar-chart-3"></i>
+            <h3>Data & Analytics</h3>
+          </div>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">Tableau</span><span
+              class="tag">Databricks</span><span class="tag">Data Visualization</span><span class="tag">A/B
+              Testing</span><span class="tag">Customer Segmentation</span><span class="tag">KPI Dashboards</span><span
+              class="tag">Marketing Research</span></div>
+        </div>
+        <div class="skc au d3">
+          <div class="skh"><i data-lucide="pen-tool"></i>
+            <h3>Design & Tools</h3>
+          </div>
+          <div class="tags"><span class="tag">Figma</span><span class="tag">Canva</span><span class="tag">UX/UI
+              Design</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span
+              class="tag">HubSpot CRM</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="st au" style="text-align:center;margin-bottom:16px;">Real Work. Real Results.</h2>
+      <div class="filt au d1">
+        <button class="fb active" data-f="all">All</button>
+        <button class="fb" data-f="Strategy">Strategy</button>
+        <button class="fb" data-f="Data">Data</button>
+        <button class="fb" data-f="Design">Design</button>
+        <button class="fb" data-f="Research">Research</button>
+      </div>
+      <div class="pgr">
+
+        <div class="pc au mix Strategy">
+          <span class="pcat">Strategy</span>
+          <h3 class="ptit">Sesame Consulting Mission</h3>
+          <p class="pout">Actionable go-to-market strategy for Zoria Tech.</p>
+          <div class="ptags"><span class="ptag">Miro</span><span class="ptag">Canva</span><span class="ptag">Market
+              Research Frameworks</span></div>
+          <button class="pdbtn" onclick="toggleDet('pa')">View Details <i data-lucide="chevron-down"
+              size="16"></i></button>
+          <div class="pdet" id="pa">
+            <div class="pdh">Problem</div>
+            <div class="pdt">Early-stage tech startup needed a structured market entry plan to compete effectively.
+            </div>
+            <div class="pdh">Approach</div>
+            <div class="pdt">Competitive analysis · target audience mapping · channel strategy · consulting-style final
+              presentation and report.</div>
+            <div class="pdh">Results</div>
+            <div class="pdm">
+              <div class="pdmb"><span class="pdmv">💡</span><span class="pdml">Business Innovation &amp; Strategic
+                  Recommendations</span></div>
+              <div class="pdmb"><span class="pdmv">📋</span><span class="pdml">Full GTM Roadmap Delivered</span></div>
+              <div class="pdmb"><span class="pdmv">🎤</span><span class="pdml">Presented to Client Leadership</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc au d1 mix Strategy">
+          <span class="pcat">Strategy</span>
+          <h3 class="ptit">Social Media Strategy</h3>
+          <p class="pout">Full social media playbook for Oblicuo Barcelona.</p>
+          <div class="ptags"><span class="ptag">Instagram</span><span class="ptag">Facebook</span><span
+              class="ptag">TikTok</span><span class="ptag">CapCut</span></div>
+          <button class="pdbtn" onclick="toggleDet('pb')">View Details <i data-lucide="chevron-down"
+              size="16"></i></button>
+          <div class="pdet" id="pb">
+            <div class="pdh">Problem</div>
+            <div class="pdt">Local Barcelona brand lacked a structured social presence and consistent content strategy.
+            </div>
+            <div class="pdh">Approach</div>
+            <div class="pdt">Empathy Map · Customer Journey Stages · Influencer Strategy · Answer the Public · Content
+              Calendar · 5 Original Social Media Posts</div>
+            <div class="pdh">Results</div>
+            <div class="pdm">
+              <div class="pdmb"><span class="pdmv">🎯</span><span class="pdml">Customer Persona Analysis</span></div>
+              <div class="pdmb"><span class="pdmv">📅</span><span class="pdml">3 Months Content Calendar</span></div>
+              <div class="pdmb"><span class="pdmv">📣</span><span class="pdml">Content Marketing Strategy</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc au d2 mix Strategy Design">
+          <span class="pcat">Strategy / Design</span>
+          <h3 class="ptit">Digify Active Agency</h3>
+          <p class="pout">Conversion-focused site for a niche digital marketing agency targeting fitness brands.</p>
+          <div class="ptags"><span class="ptag">HubSpot</span><span class="ptag">SEO</span><span
+              class="ptag">UX/UI</span><span class="ptag">Google Ads</span></div>
+          <button class="pdbtn" onclick="toggleDet('pc')">View Details <i data-lucide="chevron-down"
+              size="16"></i></button>
+          <div class="pdet" id="pc">
+            <div class="pdh">Problem</div>
+            <div class="pdt">Created a Digital Marketing Agency targeting gyms and fitness studios that needed a strong
+              online presence</div>
+            <div class="pdh">Approach</div>
+            <div class="pdt">Defined niche positioning · Landing Page Optimization · Lead Generation · SEO and Google
+              Ads best practices integrated</div>
+            <div class="pdh">Results</div>
+            <div class="pdm">
+              <div class="pdmb"><span class="pdmv">1</span><span class="pdml">Site Launched</span></div>
+              <div class="pdmb"><span class="pdmv">SEO</span><span class="pdml">Optimized</span></div>
+              <div class="pdmb"><span class="pdmv">Lead</span><span class="pdml">Capture Built</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc au mix Research">
+          <span class="pcat">Research</span>
+          <h3 class="ptit">Bachelor's Thesis</h3>
+          <p class="pout">Sharing Economy Business Models — An academic research proposal with real-world implications.
+          </p>
+          <button class="pdbtn" onclick="toggleDet('pd')">View Details <i data-lucide="chevron-down"
+              size="16"></i></button>
+          <div class="pdet" id="pd">
+            <div class="pdh">Problem</div>
+            <div class="pdt">To what extent has the sharing economy disrupted different industries?</div>
+            <div class="pdh">Approach</div>
+            <div class="pdt">Literature review · qualitative & quantitative analysis · case studies.</div>
+            <div class="pdh">Results</div>
+            <div class="pdm">
+              <div class="pdmb"><span class="pdmv">60+</span><span class="pdml">Pages</span></div>
+              <div class="pdmb"><span class="pdmv">Stats</span><span class="pdml">Analysis</span></div>
+              <div class="pdmb"><span class="pdmv">A+</span><span class="pdml">Distinction</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc au d1 mix Strategy">
+          <span class="pcat">Strategy</span>
+          <h3 class="ptit">Rosa Mundi Entrepreneurship Report</h3>
+          <p class="pout">Full business and marketing plan for a niche perfumery brand.</p>
+          <div class="ptags"><span class="ptag">Business Model Canvas</span></div>
+          <button class="pdbtn" onclick="toggleDet('pe')">View Details <i data-lucide="chevron-down"
+              size="16"></i></button>
+          <div class="pdet" id="pe">
+            <div class="pdh">Problem</div>
+            <div class="pdt">Rosa Mundi Perfumery needed a scalable growth strategy with a clear path from brand
+              positioning to market entry.</div>
+            <div class="pdh">Approach</div>
+            <div class="pdt">Market sizing · brand positioning · digital marketing plan · financial projections · UX
+              recommendations.</div>
+            <div class="pdh">Results</div>
+            <div class="pdm">
+              <div class="pdmb"><span class="pdmv">Full</span><span class="pdml">Biz Plan</span></div>
+              <div class="pdmb"><span class="pdmv">GTM</span><span class="pdml">Strategy</span></div>
+              <div class="pdmb"><span class="pdmv">Brand</span><span class="pdml">Identity</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc au mix Research">
+          <span class="pcat">Research</span>
+          <h3 class="ptit">Marketing Research Project - N26</h3>
+          <p class="pout">Consumer insights report with strategic recommendations.</p>
+          <div class="ptags"><span class="ptag">SPSS</span><span class="ptag">Excel</span><span class="ptag">R
+              Studio</span><span class="ptag">Survey Tools</span></div>
+          <button class="pdbtn" onclick="toggleDet('pg')">View Details <i data-lucide="chevron-down"
+              size="16"></i></button>
+          <div class="pdet" id="pg">
+            <div class="pdh">Problem</div>
+            <div class="pdt">Understand target user behavior and competitive positioning for a digital banking product.
+            </div>
+            <div class="pdh">Approach</div>
+            <div class="pdt">Primary research (surveys) · SPSS data analysis · Segmentation · Insight synthesis</div>
+            <div class="pdh">Results</div>
+            <div class="pdm">
+              <div class="pdmb"><span class="pdmv">100+</span><span class="pdml">Responses Analyzed</span></div>
+              <div class="pdmb"><span class="pdmv">🎯</span><span class="pdml">User Segments Identified</span></div>
+              <div class="pdmb"><span class="pdmv">📋</span><span class="pdml">Strategic Recommendations
+                  Presented</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2 class="st au" style="text-align:center;margin-bottom:64px;">Experience & Education</h2>
+      <div class="tl au">
+        <div class="ti">
+          <div class="tdot"></div>
+          <div class="tdate">Oct 2025 – Present</div>
+          <h3 class="ttit">Master in Digital Marketing & Analytics</h3>
+          <div class="torg">Toulouse Business School · Campus Barcelona</div>
+          <p class="tdesc">Key focus: analytics, AI in marketing, e-commerce strategy, and data visualization.</p>
+        </div>
+        <div class="ti">
+          <div class="tdot"></div>
+          <div class="tdate">Mar 2024 – Jul 2024</div>
+          <h3 class="ttit">Internship – Innovation & Business Development</h3>
+          <div class="torg">Vodafone Romania · Bucharest</div>
+          <p class="tdesc">Worked on innovation initiatives and business development projects within one of Romania's
+            largest telecoms companies.</p>
+        </div>
+        <div class="ti">
+          <div class="tdot"></div>
+          <div class="tdate">2022 – 2025</div>
+          <h3 class="ttit">Bachelor in International Business – Major in MIS</h3>
+          <div class="torg">Maastricht University · Exchange: Universidad Carlos III de Madrid</div>
+          <p class="tdesc">Problem-based learning, international cohort, and a specialization in Management of
+            Information Systems.</p>
+        </div>
+        <div class="ti">
+          <div class="tdot"></div>
+          <div class="tdate">Nov 2022 – Apr 2023</div>
+          <h3 class="ttit">Customer Service Agent (French-Speaking)</h3>
+          <div class="torg">H&M Group · Maastricht, Netherlands</div>
+          <p class="tdesc">Handled French-speaking customer accounts in a fast-paced multinational retail environment.
+          </p>
+        </div>
+        <div class="ti">
+          <div class="tdot"></div>
+          <div class="tdate">May 2022 – Jun 2022</div>
+          <h3 class="ttit">Internship – Structural Reform Support</h3>
+          <div class="torg">European Commission · Brussels, Belgium</div>
+          <p class="tdesc">Supported structural reform analysis within an EU institutional context.</p>
+        </div>
+        <div class="ti">
+          <div class="tdot"></div>
+          <div class="tdate">Jul 2019</div>
+          <h3 class="ttit">Internship – Trade & Customs Clearance</h3>
+          <div class="torg">FedEx · Otopeni, Romania</div>
+          <p class="tdesc">First professional experience in international trade and customs operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="ctw au">
+        <div>
+          <h2 class="ctit">Let's Build Something That Performs</h2>
+          <p class="csub">Currently seeking a 6-month internship in Spain or France. Open to hybrid and international
+            opportunities.</p>
+          <form onsubmit="event.preventDefault()">
+            <div class="fg"><label class="fl">Name</label><input type="text" class="fc" required></div>
+            <div class="fg"><label class="fl">Email</label><input type="email" class="fc" required></div>
+            <div class="fg"><label class="fl">Company</label><input type="text" class="fc"></div>
+            <div class="fg"><label class="fl">Inquiry Type</label>
+              <select class="fc">
+                <option>Internship Opportunity</option>
+                <option>Freelance Project</option>
+                <option>Collaboration</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label class="fl">Message</label><textarea class="fc" required></textarea></div>
+            <button type="submit" class="btn btn-p bsub">Send Message <i data-lucide="send" size="18"></i></button>
+          </form>
+        </div>
+        <div class="cinfo">
+          <div class="ci"><i data-lucide="mail"></i>
+            <div>
+              <h4>Email</h4><a href="mailto:smaranda.and5345@gmail.com">smaranda.and5345@gmail.com</a>
+            </div>
+          </div>
+          <div class="ci"><i data-lucide="linkedin"></i>
+            <div>
+              <h4>LinkedIn</h4><a href="https://www.linkedin.com/in/smaranda-andresescu-74a4171bb" target="_blank"
+                rel="noopener">Connect with me</a>
+            </div>
+          </div>
+          <div class="ci"><i data-lucide="map-pin"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Barcelona, Spain</p>
+            </div>
+          </div>
+          <div class="ci"><i data-lucide="calendar"></i>
+            <div>
+              <h4>Availability</h4>
+              <p>Spring / Summer 2026 — 6-month internship</p>
+            </div>
+          </div>
+          <div style="margin-top:8px;">
+            <div class="tags"><span class="tag">��🇴 Romanian</span><span class="tag">🇬🇧 English C2</span><span
+                class="tag">🇫🇷 French C2</span><span class="tag">🇪🇸 Spanish B2</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="fg2">
+        <a href="#hero" class="flog">SA<span>.</span></a>
+        <nav class="fnav">
+          <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
+            href="#experience">Experience</a><a href="#contact">Contact</a>
+        </nav>
+        <div class="fsoc">
+          <a href="https://www.linkedin.com/in/smaranda-andresescu-74a4171bb" target="_blank" aria-label="LinkedIn"><i
+              data-lucide="linkedin" size="22"></i></a>
+        </div>
+      </div>
+      <div class="fbot">Smaranda Andreșescu · Digital Marketing & Analytics · Barcelona 2026</div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Theme fixed to light
+    document.documentElement.setAttribute('data-theme', 'light');
+
+    // Scroll + Nav
+    const nav = document.getElementById('nav'), prog = document.getElementById('prog');
+    const secs = document.querySelectorAll('section'), nls = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      const s = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (s / h) * 100 + '%';
+      s > 50 ? nav.classList.add('sc') : nav.classList.remove('sc');
+      let cur = ''; secs.forEach(sec => { if (s >= sec.offsetTop - 300) cur = sec.id; });
+      nls.forEach(l => { l.classList.remove('active'); if (l.getAttribute('href').substring(1) === cur) l.classList.add('active'); });
+    });
+
+
+
+    // IntersectionObserver
+    const obs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: .1 });
+    document.querySelectorAll('.au').forEach(a => obs.observe(a));
+
+    // Typewriter
+    const tw = document.getElementById('tw');
+    const words = ["Digitally Sharp.", "Globally Minded.", "Data-Driven."];
+    let wi = 0, ci = 0, del = false;
+    function type() {
+      const w = words[wi];
+      del ? ci-- : ci++;
+      tw.textContent = w.substring(0, ci);
+      let sp = del ? 50 : 100;
+      if (!del && ci === w.length) { sp = 2200; del = true; }
+      else if (del && ci === 0) { del = false; wi = (wi + 1) % words.length; sp = 500; }
+      setTimeout(type, sp);
+    }
+    type();
+
+    // Project Filter
+    const fbs = document.querySelectorAll('.fb'), pcs = document.querySelectorAll('.pc');
+    fbs.forEach(btn => btn.addEventListener('click', () => {
+      fbs.forEach(b => b.classList.remove('active')); btn.classList.add('active');
+      const f = btn.getAttribute('data-f');
+      pcs.forEach(p => {
+        const show = f === 'all' || p.classList.contains(f);
+        p.style.transition = 'opacity .3s';
+        if (show) { p.style.display = 'flex'; setTimeout(() => p.style.opacity = '1', 10); }
+        else { p.style.opacity = '0'; setTimeout(() => p.style.display = 'none', 300); }
+      });
+    }));
+
+    // Toggle project details
+    window.toggleDet = function (id) {
+      const d = document.getElementById(id);
+      const btn = d.previousElementSibling;
+      if (d.classList.contains('open')) {
+        d.classList.remove('open');
+        btn.innerHTML = 'View Details <i data-lucide="chevron-down" size="16"></i>';
+      } else {
+        d.classList.add('open');
+        btn.innerHTML = 'Hide Details <i data-lucide="chevron-up" size="16"></i>';
+      }
+      lucide.createIcons();
+    };
+  </script>
+</body>
+
+</html>
